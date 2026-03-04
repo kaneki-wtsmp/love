@@ -1,0 +1,285 @@
+/* Estilos globales*/
+*{
+    margin: 0;
+    padding: 0;
+    /* acomodar todo a una caja imaginaria*/
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+}
+body{
+    font-family: "VT323", monospace;
+    background-color: rgb(97, 104, 82);
+    color: rgb(57, 64, 46);
+    line-height: 1.6;
+}
+.conteiner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* encabezado */
+header{
+
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(252,252,252);
+    padding: 0 20px;
+    background-image: url(../img/fon3.jpg);
+    background-size: cover;
+}
+.header-content{
+    animation: fadeIn 2s ease-in-out;
+    color: rgb(197, 150, 188);
+}
+
+
+.logout-btn {
+    position: absolute;      /* lo coloca en la esquina */
+    top: 20px;               /* distancia desde arriba */
+    right: 20px;             /* distancia desde la derecha */
+    padding: 10px 20px;
+    background-color: rgba(121, 86, 114, 0.8); /* color con transparencia */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;   /* quita el subrayado */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: rgba(188, 111, 84, 1); /* se vuelve sólido al pasar el mouse */
+}
+h1{
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.date{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+/* Seccion de los novios*/
+.couple-section{
+    background-image: url(img/fon5.jpeg);
+    padding: 80px 0;
+    text-align: center;
+}
+.couple-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    color: rgb(225, 180, 237);
+}
+.couple-member{
+    width: 300px;
+    text-align: center;
+    animation: float 2s ease-in-out infinite;
+    font-size: 15px;
+}
+/* Creacion de hijos para js y animacion  independiente */
+.couple-member:nth-child(2){
+    animation-delay: 0.5s;
+} 
+.couple-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.couple-name{
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+/* SECCIÓN DE LA CEREMONIA */
+.ceremony-section {
+    padding: 80px 0;
+    background-image: url(img/fon6.jpg);
+    text-align: center;
+}
+
+.ceremony-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map-container {
+    margin-top: 40px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: rgb(125, 18, 135);
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: rgb(136, 20, 114);
+    margin: 15px auto;
+}
+.decir{
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: rgb(166, 22, 239);
+    position: relative;
+}
+.ceremony-details {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+/* MAPA */
+.map-container {
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* SECCIÓN DE REGALOS */
+.gifts-section {
+    padding: 80px 0;
+    background-image: url(img/fon11.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.gifts-button {
+    background-color: rgb(188, 111, 84);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(184, 107, 107, 0.3);
+}
+
+.gifts-button:hover {
+    background-color: rgb(201, 134, 113);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(201, 134, 113, 0.4);
+}
+
+/* SECCIÓN DE CONFIRMACIÓN */
+.confirmation-section {
+    padding: 80px 0;
+    background-image: url(img/fon10.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.confirmation-button {
+    background-color: rgb(188, 111, 84);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(201, 134, 113, 0.4);
+}
+
+.confirmation-button:hover {
+    background-color: rgb(201, 134, 113);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(201, 134, 113, 0.4);
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: rgb(66, 39, 83);
+    color: #f9f5f3;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .couple-container {
+        flex-direction: column;
+    }
+
+    .couple-member {
+        width: 100%;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .date {
+        font-size: 1.2rem;
+    }
+
+    .couple-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gift-button,
+    .confirmation-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
